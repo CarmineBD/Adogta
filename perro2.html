@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Adogta - Pongo</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device=width,initial-scale=1.0">
+	<link rel="shortcut icon" href="img/logomini.png">
+	<meta name="description" content="La página web para adoptar y publicar perros en búsqueda de hogar y dueños">
+
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+
+	<link rel="stylesheet" type="text/css" href="movil.css" media="screen and (max-width: 500px)">
+
+	<style type="text/css">
+
+
+
+
+
+
+
+
+
+		aside{
+			font-size: calc(12px + 0.5vw);
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			grid-area: 2/1/4/2;
+			background-color: #BEE3DB;
+
+		}
+
+		aside section{
+			box-sizing: border-box;
+			padding: 10%;
+
+			position: sticky;
+			top: 0;
+		}
+
+		aside figure{
+			margin: auto;
+			overflow: hidden;
+			border-radius: 800px;
+			background-color: #fff;
+		}
+
+		aside>section>input, select{
+			font-size: calc(10px + 0.5vw);
+			color: #555B6E;
+			width: 100%;
+			text-align: center;
+			height: 10%;
+			margin: 10% 0% 10% 0%;
+			box-sizing: border-box;
+			border: none;
+			border-radius: 50px;
+			background-color: #89B0AE;
+		}
+
+	
+
+		aside select{
+			padding: 0 15px 0 10px;
+		}
+
+
+		aside>section li{
+			margin: 15px 15px;
+		}
+
+
+
+
+
+
+
+
+
+		main{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+
+		main>h2{
+			letter-spacing: -1px;
+			font-size: calc(64px + 0.5vw);
+			width: 100%;
+			display: flex;
+			align-items: center;
+			height: 20vh;
+			margin-left: 2vw;
+			
+		}
+
+		main>section{
+			width: 100%;
+			max-width: 1400px;
+			/*padding: 1vh 1vw 1vh 1vw;*/
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+		}
+
+		main>section>article{
+			display: flex;
+			flex-direction: column;
+			height: 50vh;
+			position: relative;
+			background-color: #fff;
+			margin: 1vw;
+			overflow: hidden;
+		}
+
+		main>section>article h2{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			flex: 1;
+			color: #555B6E;
+			background-color: #BEE3DB;
+
+		}
+
+		main>section>article:nth-of-type(1){
+			width: 100%;
+			height: 70vw;
+			max-width: 1000px;
+			max-height: 1000px;
+			min-height: 500px;
+		}
+
+		main>section>article:nth-of-type(1)>a{
+			flex: 9;
+			width: 100%;
+			height: 100%;
+		}
+
+
+	
+
+		main>section>article:nth-of-type(1) figure{
+			width: 100%;
+			height: 100%;
+
+			
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			padding: 1vh 1vw 1vh 1vw;
+		}
+
+		main>section:nth-of-type(1)>article:nth-of-type(1) figure{background-image: url(img/perro2/img0.jpg);}
+
+
+		main>section>article:nth-of-type(2) p{
+			font-size: calc(12px + 0.5vw);
+			width: 100%;
+			display: flex;
+			align-items: center;
+			height: 20vh;
+			margin-right: 100px;
+			box-sizing: border-box;
+			padding: 10px;
+			flex: 1;
+			background-color: #fff;
+
+		}
+
+		main>section>article:nth-of-type(2) p:nth-of-type(odd){
+			background-color: #eee;
+		}
+
+		main>button{
+			font-weight: bold;
+			border: none;
+			background-color: #BEE3DB;
+			color: #555B6E;
+			padding: 1vw;
+			border-radius: 50px;
+			width: 300px;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+		@media screen and (max-width: 500px){
+			aside{display: none;}
+
+			body{
+				grid-template-columns: auto;
+			}
+
+			main>section{
+				grid-template-columns: 100%;
+			}
+
+			main>section>article:nth-of-type(2) h2{
+				display: none;
+			}
+
+			main>section>article:nth-of-type(2){
+				margin-bottom: 20vw;
+			}
+			
+			main>section>article:nth-of-type(1) h2{
+				position: absolute;
+				top: 0;
+				padding: 2vw;
+			}
+		}
+
+		@media screen and (max-width: 1000px){
+			aside{
+				
+			}
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<aside>
+		<section>
+
+			<figure>
+				<img src="img/iconos/user.svg" alt="Imagen de usuario" title="Usuario">
+			</figure>
+			<ul>
+				<li><a onclick="inicioSesion()">Iniciar sesión</a></li>
+			</ul>
+		</section>
+	</aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<nav>
+		<ul>
+			<li><section></section><a href="index.html">Adoptar</a></li>
+			<li><section></section><a href="adopcion.html">Dar en adopción</a></li>
+			<li><section></section><a href="donaciones.html">Donaciones</a></li>
+			<li><section></section><a href="registro.html">Formar parte</a></li>
+		</ul>
+	</nav>
+
+
+
+
+
+
+
+
+
+
+
+	<main>
+
+		<h2>Pongo</h2>
+		<section>
+			<article>
+				<figure></figure>
+			</article>
+			<article>
+				<p>Raza: Dalmata</p>
+				<p>Edad: 27 meses.</p>
+				<p>Peso 32kg</p>
+				<p>Ubicación Maracay</p>
+				<p>Descripccion: </p>
+				<p>Pongo es un ejemplar Dálmata que ha sido puesto encontrado abandonado en las calles de valencia. Presentaba algunas lesiones que han sido tratadas en el centro ahora espera por una nueva familia que le adopte. </p>
+			</article>
+			
+		</section>
+		<button>Contactar</button>
+
+	
+	</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<footer>
+		<p>Todos los derechos reservados</p>
+		<ul>
+			<li><a href="index.html">Adoptar</a></li>
+			<li><a href="adopcion.html">Dar en adopción</a></li>
+			<li><a href="donaciones.html">Donaciones</a></li>
+			<li><a href="registro.html">Formar parte</a></li>
+
+	</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		function inicioSesion(){
+
+			var seccion = document.createElement('section');
+			seccion.setAttribute('class', 'fondo');
+
+			var formulario = document.createElement('form');
+			formulario.setAttribute('class', 'ventana');
+
+			var titulo = document.createElement('h2');
+			titulo.innerHTML = 'Iniciar sesión'
+
+			var entradaCorreo = document.createElement('input');
+			entradaCorreo.setAttribute('type', 'text');
+			entradaCorreo.setAttribute('placeholder', 'Correo electrónico');
+			entradaCorreo.setAttribute('required', 'required');
+
+
+
+			var entradaContraseña = document.createElement('input');
+			entradaContraseña.setAttribute('type', 'password');
+			entradaContraseña.setAttribute('placeholder', 'Contraseña');
+			entradaContraseña.setAttribute('required', 'required');
+
+			var boton = document.createElement('button');
+			var enlace = document.createElement('a');
+			enlace.innerHTML = '¿No tienes cuenta? Regístrate aquí.'
+			enlace.setAttribute('href', 'registro.html')
+
+			var figura = document.createElement('figure');
+			figura.setAttribute('onclick', 'cerrar(this)')
+
+
+			var imagen = document.createElement('img');
+			imagen.src = 'img/iconos/close-circle-line.svg';
+
+			figura.appendChild(imagen)
+			formulario.appendChild(figura)
+
+			boton.innerHTML = 'Iniciar sesión'
+			formulario.appendChild(titulo)
+			formulario.appendChild(entradaCorreo)
+			formulario.appendChild(entradaContraseña)
+			formulario.appendChild(enlace)
+			formulario.appendChild(boton)
+			seccion.appendChild(formulario)
+
+			document.body.appendChild(seccion)
+
+
+			
+
+
+		}
+
+		function cerrar(elemento){
+			document.body.querySelector('.fondo').remove();
+		}
+	</script>
+
+</body>
+</html>

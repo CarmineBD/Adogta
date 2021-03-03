@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Adogta - Donaciones</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device=width,initial-scale=1.0">
+	<link rel="shortcut icon" href="img/logomini.png">
+	<meta name="description" content="La página web para adoptar y publicar perros en búsqueda de hogar y dueños">
+
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+
+	<link rel="stylesheet" type="text/css" href="movil.css" media="screen and (max-width: 500px)">
+
+	<style type="text/css">
+
+		body{
+			display: flex;
+			flex-direction: column;
+		}
+
+		nav{
+			grid-area: 2/1/3/2;		
+		}
+
+		body{
+			grid-area: 3/1/4/2;		
+		}
+
+		main>h2{
+			letter-spacing: -1px;
+			font-size: calc(64px + 0.5vw);
+			width: 100%;
+			display: flex;
+			align-items: center;
+			height: 20vh;
+			margin-left: 2vw;
+			
+		}
+
+		main>section{
+			width: 100%;
+			display: grid;
+			grid-template-columns: 40% auto;
+
+
+		}
+
+		main>section:nth-of-type(1)>article:nth-of-type(1){
+			max-width: 500px;
+			grid-template-areas: 1/1/2/2;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		main>section article:nth-of-type(1) figure{
+			margin: 1vw;
+			background-color: #fff;
+			width: 20vw;
+			height: 20vw;
+
+			border-radius: 1000px;
+		}
+
+		main>section>form{
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			grid-template-areas: 1/2/2/3;		
+		}
+
+		main>section>form h2{
+			text-align: center;
+			margin: 1vw;
+			letter-spacing: -1px;
+			font-size: calc(32px + 0.5vw);
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+		}
+
+		main>section>form input, main>section>form>select{
+			box-sizing: border-box;
+			/*padding: 0.5vw;*/
+			margin: 1vw;
+			border-radius: 50px;
+			border: none;
+			width: 100%;
+			height: 5vw;
+			max-height: 50px;
+			/*max-width: 800px;*/
+			text-align: center;
+		}
+
+		main>section>form>article{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+
+
+		main>section>form>article>input{
+			width: 45%;
+		}
+
+		main>section:nth-of-type(2){
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;				
+		}
+
+		main>section:nth-of-type(2) button{
+			font-weight: bold;
+			width: 20vw;
+			color: #555B6E;
+			background-color: #BEE3DB;
+			box-sizing: border-box;
+			padding: 1vw;
+			margin: 2vw;
+			border-radius: 50px;
+			border: none;
+			text-align: center;
+		}
+
+		main>section:nth-of-type(2) p{
+			margin: 1vw;
+			text-align: center;
+			width: 50vw;
+			color: #aaa;
+		}
+
+		main>section:nth-of-type(1)>article:nth-of-type(1){
+			display: flex;
+			flex-direction: column;
+			height: 50vh;
+			position: relative;
+			background-color: #fff;
+			margin: 1vw;
+			overflow: hidden;
+		}
+
+		main>section:nth-of-type(1)>article:nth-of-type(1) h2{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			flex: 1;
+			color: #555B6E;
+			background-color: #BEE3DB;
+
+		}
+
+		main>section:nth-of-type(1)>article:nth-of-type(1)>a{
+			flex: 9;
+			width: 100%;
+			height: 100%;
+		}
+
+		main>section:nth-of-type(1)>article:nth-of-type(1) figure{
+			width: 100%;
+			height: 100%;
+
+			
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			padding: 1vh 1vw 1vh 1vw;
+		}
+
+		main>section:nth-of-type(1)>article:nth-of-type(1) figure{background-image: url(img/perro1/img0.jpg);}
+
+
+		@media screen and (max-width: 700px){
+			body{
+				grid-template-columns: auto;
+			}
+
+			main>section:nth-of-type(1){
+				display: flex;
+				flex-direction: column;
+			}
+
+			main>section article:nth-of-type(1) figure{
+				width: 50vw;
+				height: 50vw;
+			}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><section></section><a href="index.html">Adoptar</a></li>
+			<li><section></section><a href="adopcion.html">Dar en adopción</a></li>
+			<li><section></section><a href="donaciones.html">Donaciones</a></li>
+			<li><section></section><a href="registro.html">Formar parte</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<h2>Donaciones</h2>
+		<section>
+			<article>
+				<figure></figure>
+				<h2>¡Gracias!</h2>
+			</article>
+			<form>
+				<h2>Datos personales</h2>
+				<article>	
+					<input type="text" placeholder="Nombre" required />
+					<input type="text" placeholder="Apellido" required />
+				</article>
+				<select>
+					<option disabled selected hidden>Estado</option>
+					<option>Amazonas</option>
+					<option>Anzoátegui</option>
+					<option>Apure</option>
+					<option>Aragua</option>
+					<option>Barinas</option>
+					<option>Bolívar</option>
+					<option>Carabobo</option>
+					<option>Cojedes</option>
+					<option>Delta Amacuro</option>
+					<option>Distrito Capital</option>
+					<option>Falcón</option>
+					<option>Guárico</option>
+					<option>Lara</option>
+					<option>Mérida</option>
+					<option>Miranda</option>
+					<option>Monagas</option>
+					<option>Nueva Esparta</option>
+					<option>Portuguesa</option>
+					<option>Sucre</option>
+					<option>Táchira</option>
+					<option>Trujillo</option>
+					<option>Vargas</option>
+					<option>Yaracuy</option>
+					<option>Zulia</option>
+				</select>
+				<input type="text" placeholder="Ubicación completa" required />
+				<input type="mail" placeholder="Correo electrónico" required />
+				<input type="number" placeholder="Número de teléfono" required />
+			</form>	
+		</section>
+		<section>
+				<form>
+					<h2>Método de pago</h2>
+					<select>
+						<option disabled selected hidden>Tarjeta</option>
+					</select>
+
+					<input type="text" placeholder="Número de tarjeta" required />
+					<input type="text" placeholder="Nombre de tarjeta" required />
+
+					<article>	
+						<input type="text" placeholder="Mes de vencimiento" required />
+						<input type="text" placeholder="Año de vencimiento" required />
+					</article>
+					<input type="number" placeholder="Monto ($)" required />
+				</form>
+				<p>Al aceptar los términos de condiciones, estás otorgando tus datos a Adogya y estos seránm utilizados para mejorar tus búsquedas y poder ofrecertte la mejor opción</p>
+				<p>Tus datos serán privados y ninguno de nuestros Agentes tendrá el accseso a estos</p>
+
+
+
+				<article>
+					<input type="checkbox" required />
+					<label>Acepto los términos de uso y condición</label>
+				</article>
+				
+
+				<article>
+					<input type="checkbox"/>
+					<label>Deseo recibir noificaciones de las novedades por correo electrónico</label>
+				</article>
+
+				<button>Donar</button>
+				
+		</section>
+	
+	</main>
+	<footer>
+		<p>Todos los derechos reservados</p>
+		<ul>
+			<li><a href="#">Adoptar</a></li>
+			<li><a href="#">Dar en adopción</a></li>
+			<li><a href="#">Donaciones</a></li>
+			<li><a href="#">Formar parte</a></li>
+		</ul>
+
+	</footer>
+</body>
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Adogta</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device=width,initial-scale=1.0">
+	<link rel="shortcut icon" href="img/logomini.png">
+	<meta name="description" content="La página web para adoptar y publicar perros en búsqueda de hogar y dueños">
+
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+
+	<link rel="stylesheet" type="text/css" href="movil.css" media="screen and (max-width: 500px)">
+
+	<style type="text/css">
+
+
+
+
+
+
+
+
+
+
+		header{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			grid-area: 1/1/2/3;
+			background-color: #fff;
+			height: 100vh;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		header h1{
+			opacity: 0%;
+			position: relative;
+			z-index: 10;
+			font-size: calc(64px + 3vw);
+			color: #fff;
+			letter-spacing: -2px;
+			font-weight: 900;
+			animation: aparecerh1 1s 0.5s 1 forwards;
+		}
+
+		header hr{
+			opacity: 0%;
+			width: 0%;
+			margin: 20px 0px 20px 0px;
+			border: #fff solid 2px;
+			animation: aparecerhr 1s 1.5s 1 forwards;
+		}
+
+		header h2{
+			opacity: 0%;
+			position: relative;
+			font-size: calc(24px + 3vw);
+			color: #fff;
+			animation: aparecerh2 2s 2.5s 1 forwards;
+		}
+
+
+
+		header>article{
+			z-index: 10;
+			position: absolute;
+			top: 40vh;
+			left: 5vw;
+		}
+
+		header{
+			width: 100vw;
+			height: 100vh;
+		}
+
+		header>section{
+			overflow: hidden;
+			position: relative;
+			width: 100vw;
+			height: 100vh;
+		}
+
+		header>section>article{
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+		}
+
+		header>section>article>figure{
+			z-index: 0;
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			filter: invert(15%);
+		}
+
+		header>section>article:nth-of-type(1) figure{background-image: url('img/fondos/img7.jpg'); left: 50vw; animation: aparecer 20s 0s infinite forwards; clip: rect(0,100vw,100vh,50vw)}
+
+		header>section>article:nth-of-type(2) figure{background-image: url('img/fondos/img6.jpg'); left: 50vw; animation: aparecer 20s 5s infinite forwards; clip: rect(0,100vw,100vh,50vw)}
+
+		header>section>article:nth-of-type(3) figure{background-image: url('img/fondos/img5.jpg'); left: 50vw; animation: aparecer 20s 10s infinite forwards; clip: rect(0,100vw,100vh,50vw)}
+
+		header>section>article:nth-of-type(4) figure{background-image: url('img/fondos/img3.jpg'); left: 50vw; animation: aparecer 20s 15s infinite forwards; clip: rect(0,100vw,100vh,50vw)}
+
+
+
+		@keyframes aparecer{
+			0%{ left: 50vw; z-index: 2}
+			5%, 25%{left: 0vw; clip: rect(0,100vw,100vh,0vw); z-index: 2;}
+			30%,100%{left: -50vw; z-index: 0}
+
+		}
+
+		@keyframes aparecerhr{
+			0%{width: 0%; opacity: 10%;}
+			100%{width: 100%; opacity: 100%;}
+
+		}
+
+		@keyframes aparecerh1{
+			0%{right: 50px; opacity: 10%;}
+			100%{right: 0px; opacity: 100%;}
+
+		}
+
+
+		@keyframes aparecerh2{
+			0%{top: 20px; opacity: 0%;}
+			100%{top: 0px; opacity: 100%;}
+
+		}
+
+
+
+
+
+
+
+		aside{
+			font-size: calc(12px + 0.5vw);
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			grid-area: 2/1/4/2;
+			background-color: #BEE3DB;
+
+		}
+
+		aside section{
+			box-sizing: border-box;
+			padding: 10%;
+
+			position: sticky;
+			top: 0;
+		}
+
+		aside figure{
+			margin: auto;
+			overflow: hidden;
+			border-radius: 800px;
+			background-color: #fff;
+		}
+
+		aside>section>input, select{
+			font-size: calc(10px + 0.5vw);
+			color: #555B6E;
+			width: 100%;
+			text-align: center;
+			height: 10%;
+			margin: 10% 0% 10% 0%;
+			box-sizing: border-box;
+			border: none;
+			border-radius: 50px;
+			background-color: #89B0AE;
+		}
+
+	
+
+		aside select{
+			padding: 0 15px 0 10px;
+		}
+
+
+		aside>section li{
+			margin: 15px 15px;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+		main>h2{
+			letter-spacing: -1px;
+			font-size: calc(64px + 0.5vw);
+			width: 100%;
+			display: flex;
+			align-items: center;
+			height: 20vh;
+			margin-left: 2vw;
+			
+		}
+
+		main>section{
+			width: 100%;
+			max-width: 1400px;
+			/*padding: 1vh 1vw 1vh 1vw;*/
+			display: grid;
+			grid-template-columns: 40% auto;
+		}
+
+		main>section>article{
+			display: flex;
+			flex-direction: column;
+			height: 50vh;
+			position: relative;
+			background-color: #fff;
+			margin: 1vw;
+			overflow: hidden;
+		}
+
+		main>section>article h2{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			flex: 1;
+			color: #555B6E;
+			background-color: #BEE3DB;
+
+		}
+
+		main>section>article:nth-of-type(1)>a{
+			flex: 9;
+			width: 100%;
+			height: 100%;
+		}
+
+
+	
+
+		main>section>article:nth-of-type(1) figure{
+			width: 100%;
+			height: 100%;
+
+			
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			padding: 1vh 1vw 1vh 1vw;
+		}
+
+		main>section:nth-of-type(1)>article:nth-of-type(1) figure{background-image: url(img/perro1/img0.jpg);}
+		main>section:nth-of-type(2)>article:nth-of-type(1) figure{background-image: url(img/perro2/img0.jpg);}
+		main>section:nth-of-type(3)>article:nth-of-type(1) figure{background-image: url(img/perro3/img0.jpg);}
+		main>section:nth-of-type(4)>article:nth-of-type(1) figure{background-image: url(img/perro4/img0.jpg);}
+
+		main>section>article:nth-of-type(2) p{
+			font-size: calc(12px + 0.5vw);
+			width: 100%;
+			display: flex;
+			align-items: center;
+			height: 20vh;
+			margin-right: 100px;
+			box-sizing: border-box;
+			padding: 10px;
+			flex: 1;
+			background-color: #fff;
+
+		}
+
+		main>section>article:nth-of-type(2) p:nth-of-type(odd){
+			background-color: #eee;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+		@media screen and (max-width: 500px){
+			aside{display: none;}
+
+			body{
+				grid-template-columns: auto;
+			}
+
+			nav{
+				grid-template-areas: 2/1/3/2;
+			}
+
+			main>section{
+				grid-template-columns: 100%;
+			}
+
+			main>section>article:nth-of-type(2) h2{
+				display: none;
+			}
+
+			main>section>article:nth-of-type(2){
+				margin-bottom: 20vw;
+			}
+			
+			main>section>article:nth-of-type(1) h2{
+				position: absolute;
+				top: 0;
+				padding: 2vw;
+			}
+		}
+
+		@media screen and (max-width: 1000px){
+
+			/*body{
+				grid-template-columns: auto;
+			}*/
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<aside>
+		<section>
+
+			<figure>
+				<img src="img/iconos/user.svg" alt="Imagen de usuario" title="Usuario">
+			</figure>
+			<ul>
+				<li><a onclick="inicioSesion()">Iniciar sesión</a></li>
+			</ul>
+
+			<input type="text" placeholder="Búsqueda" />
+
+			<select>
+				<option value="" disabled selected hidden>Filtro</option>
+				<option value="Recientes">Recientes</option>
+				<option value="Antiguos" >Antiguos</option>
+				<option value="Distancia" >Distancia</option>
+				<option value="Urgentes" >Urgentes</option>
+			</select>
+			<select>
+				<option value="" disabled selected hidden>Zona</option>
+				<option value="Caracas">Caracas</option>
+				<option value="Valencia" >Valencia</option>
+				<option value="Maracay" >Maracay</option>
+			</select>
+		</section>
+	</aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<header>
+		<article>
+			<h1>Adogta</h1>
+			<hr>
+			<h2>Encuentra tu mascota</h2>
+		</article>
+
+		<section>
+			<article>
+				<figure></figure>
+			</article>
+			<article>
+				<figure></figure>
+			</article>
+			<article>
+				<figure></figure>
+			</article>
+			<article>
+				<figure></figure>
+			</article>
+		</section>	
+
+
+	</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<nav>
+		<ul>
+			<li><section></section><a href="index.html">Adoptar</a></li>
+			<li><section></section><a href="adopcion.html">Dar en adopción</a></li>
+			<li><section></section><a href="donaciones.html">Donaciones</a></li>
+			<li><section></section><a href="registro.html">Formar parte</a></li>
+		</ul>
+	</nav>
+
+
+
+
+
+
+
+
+
+
+
+	<main>
+
+		<h2>Novedades</h2>
+		<section>
+			<article>
+				<a href="perro1.html">
+					<figure></figure>
+				</a>
+				<h2>Max</h2>
+			</article>
+			<article>
+
+				<h2>Max</h2>
+
+				<p>Raza: Beagle</p>
+				<p>Edad: 18 meses.</p>
+				<p>Peso 29kg</p>
+				<p>Ubicación Valencia</p>
+				<p>Descripccion: </p>
+				<p>Max es un ejemplar Beagle que ha sido puesto en adopción porque sus dueños no podían hacerse cargo de él. Ahora Max espera por una nueva familia que le adopte.</p>
+			</article>
+			
+		</section>
+	
+		<section>
+			<article>
+				<a href="perro2.html">
+					<figure></figure>
+				</a>
+				<h2>Pongo</h2>
+			</article>
+			<article>
+
+				<h2>Pongo</h2>
+
+				<p>Raza: Dalmata</p>
+				<p>Edad: 27 meses.</p>
+				<p>Peso 32kg</p>
+				<p>Ubicación Maracay</p>
+				<p>Descripccion: </p>
+				<p>Pongo es un ejemplar Dálmata que ha sido puesto encontrado abandonado en las calles de valencia. Presentaba algunas lesiones que han sido tratadas en el centro ahora espera por una nueva familia que le adopte. </p>
+			</article>
+			
+		</section>
+
+		<section>
+			<article>
+				<a href="perro3.html">
+					<figure></figure>
+				</a>
+				<h2>Charlie</h2>
+			</article>
+			<article>
+
+				<h2>Charlie</h2>
+
+				<p>Raza: Labrador</p>
+				<p>Edad: 33 meses</p>
+				<p>Peso 35kg</p>
+				<p>Caracas</p>
+				<p>Descripccion: </p>
+				<p>Charlie es un ejemplar Labrador Retriever que ha sido criado en nuestro centro de adopción. Su madre le dio a luz antes de ser adoptada por otra familia.</p>
+			</article>
+			
+		</section>
+
+		<section>
+			<article>
+				<a href="perro4.html">
+					<figure></figure>
+				</a>
+				<h2>Capitán</h2>
+			</article>
+			<article>
+
+				<h2>Capitán</h2>
+
+				<p>Raza: Pastor alemán</p>
+				<p>Edad: 42 meses</p>
+				<p>Peso 35kg</p>
+				<p>Valencia</p>
+				<p>Descripccion: </p>
+				<p>Capitán es un ejemplar Pastor Aleman que ha sido puesto en adopción porque sus dueños no podían hacerse cargo de él. Es un perro que necesita mucha actividad física para mantenerse saludable.</p>
+			</article>
+			
+		</section>
+	
+	
+	</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<footer>
+		<p>Todos los derechos reservados</p>
+		<ul>
+			<li><a href="index.html">Adoptar</a></li>
+			<li><a href="adopcion.html">Dar en adopción</a></li>
+			<li><a href="donaciones.html">Donaciones</a></li>
+			<li><a href="registro.html">Formar parte</a></li>
+
+	</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		function inicioSesion(){
+
+			var seccion = document.createElement('section');
+			seccion.setAttribute('class', 'fondo');
+
+			var formulario = document.createElement('form');
+			formulario.setAttribute('class', 'ventana');
+
+			var titulo = document.createElement('h2');
+			titulo.innerHTML = 'Iniciar sesión'
+
+			var entradaCorreo = document.createElement('input');
+			entradaCorreo.setAttribute('type', 'text');
+			entradaCorreo.setAttribute('placeholder', 'Correo electrónico');
+			entradaCorreo.setAttribute('required', 'required');
+
+
+
+			var entradaContraseña = document.createElement('input');
+			entradaContraseña.setAttribute('type', 'password');
+			entradaContraseña.setAttribute('placeholder', 'Contraseña');
+			entradaContraseña.setAttribute('required', 'required');
+
+			var boton = document.createElement('button');
+			var enlace = document.createElement('a');
+			enlace.innerHTML = '¿No tienes cuenta? Regístrate aquí.'
+			enlace.setAttribute('href', 'registro.html')
+
+			var figura = document.createElement('figure');
+			figura.setAttribute('onclick', 'cerrar(this)')
+
+
+			var imagen = document.createElement('img');
+			imagen.src = 'img/iconos/close-circle-line.svg';
+
+			figura.appendChild(imagen)
+			formulario.appendChild(figura)
+
+			boton.innerHTML = 'Iniciar sesión'
+			formulario.appendChild(titulo)
+			formulario.appendChild(entradaCorreo)
+			formulario.appendChild(entradaContraseña)
+			formulario.appendChild(enlace)
+			formulario.appendChild(boton)
+			seccion.appendChild(formulario)
+
+			document.body.appendChild(seccion)
+
+			for (let i = 0; !arturo; i++) {
+				console.log('Arturo sigue siendo'+arturo)
+			}
+
+
+			
+
+
+		}
+
+		function cerrar(elemento){
+			document.body.querySelector('.fondo').remove();
+		}
+	</script>
+
+</body>
+</html>
